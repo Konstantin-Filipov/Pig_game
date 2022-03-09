@@ -1,13 +1,19 @@
 """
-Lets play "pig".
+================================================================================
+================================================================================
+                            WELCOME TO PIG
 
-Type "roll" in order to throw the dice to collect points,
+                Type "setname" to set your username!
 
-If you throw 1, your points get reset, thankfully you have the option
-to stop your turn and keep the collected points by typing the command
-"stop".
+        Type "roll" in order to throw the dice to collect points
+                        But be careful!!!
+    If you roll 1 than your collected points from this round will be lost
+          So if you feel like you shouldn't push your luck anymore
+       Type "hold" to hold your points and pass the turn to your enemy.
 
-Whoever reaches first 100 points, wins.
+                  Whoever reaches 100 is the WINNER!
+================================================================================
+================================================================================
 """
 
 import shell
