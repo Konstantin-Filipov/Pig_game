@@ -10,9 +10,9 @@ to stop your turn and keep the collected points by typing the command
 Whoever reaches first 100 points, wins.
 """
 
-import shell
+import multiplayer
 
 
 if __name__ == "__main__":
     print(__doc__)
-    shell.Shell().cmdloop()
+    multiplayer.Multiplayer().cmdloop()
