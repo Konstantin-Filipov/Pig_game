@@ -16,9 +16,9 @@
 ================================================================================
 """
 
-import shell
+import multiplayer
 
 
 if __name__ == "__main__":
     print(__doc__)
-    shell.Shell().cmdloop()
+    multiplayer.Multiplayer().cmdloop()
