@@ -1,41 +1,23 @@
 class Player:
-    player_record_list = []
+    score = 0
+    score_turn = 0
+    name = None
+    player_counter = 1
+    index = 0
 
+    def __init__(self, i):
+        self.index = i
 
+    def setName(self, updatedName):
+        #set current name of player
+        self.name = updatedName
 
-    def __init__(self,name,score):
-        self.name = name
-        self.score = score
-
-    def add_to_list(first_player,second_player):
-        Player.player_record_list.append(first_player)
-        Player.player_record_list.append(second_player)
-        print(Player.player_record_list)
-
-    
-    #def update_score(first_player):
+    def update_score(self):
        #This method should update the players score
-    #   bee = first_player 
-        
+       self.score = self.score + self.score_turn
+
 
     #def sort(player_record_list):
         #this method should sort the players' scores.
     #    for item in player_record_list:
-    #        item 
-
-
-
-first_player = Player('Jane', 0)
-second_player = Player('Esther', 23)
-Player.add_to_list()
-
-
-
-        
-
-   
-
-
-
-
-        
+    #        item

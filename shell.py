@@ -6,43 +6,56 @@ import player
 
 class Shell(cmd.Cmd):
 
+
     intro = "Welcome to the game. Type help or ? to list commands.\n"
-    prompt = "(game) "
 
     def __init__(self):
         """Init the object."""
         super().__init__()
-        self.player1 = player.Player()
-        self.player2 = player.Player()
-        self.dice = dice.Dice()
+        self.player1 = player.Player(1) # score = 0, index = 1
+        self.player2 = player.Player(2) # score = 0, index = 2
+        self.playerTurn = player.Player(1) # score = 0, index = 1
 
-    def do_set_name(self, playername, index):
-        printf("set new nickname for player")
+        self.dice = dice.Dice() # dice object to call the roll() later
 
-        if not isinstance(index, int):
-            raise TypeError("please specify the player (type '1' / '2')")
-
-        if not index == 1 or index == 2:
-            raise ValueError("No such player.")
-
-        if index == 1:
+    def do_setname(self, playerName):
+        if self.playerTurn.index == 1:
             self.player1.setName(playerName)
-            printf(f"nickname for player {index} is set to {playername}")
-        elif index == 2:
+            print(f"nickname for player{self.playerTurn.index} is set to {playerName}")
+        elif self.playerTurn.index == 2:
             self.player2.setName(playerName)
-            printf(f"nickname for player {index} is set to {playername}")
+            print(f"nickname for player{self.playerTurn.index} is set to {playerName}")
 
+    def do_stop(self, _):
+        """Its next player turn"""
+        if self.playerTurn.index == 1:
+            self.player1.score_turn = 0 # reset the score turn for player 1
+            self.playerTurn.index = 2 #change the index to point to 2nd obj player
+            print(f"Now is {self.player2.name}'s turn")
+        elif self.playerTurn.index == 2:
+            self.player2.score_turn = 0# reset the score turn for player 2
+            self.playerTurn.index = 1 #change the index to point to 1st obj player
+            print(f"Now is {self.player1.name}'s turn")
 
     def do_roll(self, _):
         """roll the dice"""
-        rolled = dice.roll()
-        printf(f"You rolled {rolled}")
-        if (rolled == 1):
-            printf("points are lost!")
-
-
-    def do_stop(self, _):
-        """stop your turn"""
+        rolled = self.dice.roll()
+        if rolled != 1:
+            if self.playerTurn.index == 1:
+                self.player1.score_turn = rolled
+                self.player1.update_score() # update ocerall score
+                print(f"Player {self.player1.name} rolled {rolled}, overall score: {self.player1.score}")
+            elif self.playerTurn.index == 2:
+                self.player2.score_turn = rolled
+                self.player2.update_score() # update ocerall score
+                print(f"Player {self.player2.name} rolled {rolled}, overall score: {self.player2.score}")
+        else:
+            if self.playerTurn.index == 1:
+                print(f"{self.player1.name} rolled 1 and lost the points from this turn")
+                self.do_stop(self)
+            elif self.playerTurn.index == 2:
+                print(f"{self.player2.name} rolled 1 and lost the points from this turn")
+                self.do_stop(self)
 
     def do_exit(self, _):
         # pylint: disable=no-self-use
