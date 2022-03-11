@@ -18,6 +18,9 @@ class Bot:
         elif set_d == "h":
             print("Difficulty set to HARD.\n")
             self.level = "hard"
+        else:
+            print("Wrong input.\n")
+            self.set_bot_level()
 
     def set_iterations(self): # set the iterations count
         """Sets how many turns the bot will play"""
