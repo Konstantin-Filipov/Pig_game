@@ -5,7 +5,6 @@ import cmd
 
 class ChooseGameMode(cmd.Cmd):
 
-    gameMode = None
     intro = "game modes: singleplayer(press s and enter) / multiplayer(press m and enter).\n"
 
     def do_s(self, _):
