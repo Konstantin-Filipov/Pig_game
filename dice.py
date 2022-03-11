@@ -14,25 +14,20 @@ class Dice:
     def dice_graph(self, r):
         """Produce graphical representation of current dice's face"""
         if r == 1:
-            dice_face = " _______\n|       |\n|   O   |\n|_______|\n"
-            return dice_face
+            print(" _______\n|       |\n|   O   |\n|_______|\n")
 
         elif r == 2:
-            dice_face = " _______\n| O     |\n|       |\n|_____O_|\n"
-            return dice_face
+            print(" _______\n| O     |\n|       |\n|_____O_|\n")
 
         elif r == 3:
-            dice_face = " _______\n| O     |\n|   O   |\n|_____O_|\n"
-            return dice_face
+            print(" _______\n| O     |\n|   O   |\n|_____O_|\n")
 
         elif r == 4:
-            dice_face = " _______\n| O   O |\n|       |\n|_O___O_|\n"
-            return dice_face
+            print(" _______\n| O   O |\n|       |\n|_O___O_|\n")
 
         elif r == 5:
-            dice_face = " _______\n| O   O |\n|   O   |\n|_O___O_|\n"
-            return dice_face
+            print(" _______\n| O   O |\n|   O   |\n|_O___O_|\n")
 
         elif r == 6:
-            dice_face = " _______\n| O   O |\n| O   O |\n|_O___O_|\n"
-            return dice_face
+            print(" _______\n| O   O |\n| O   O |\n|_O___O_|\n")
+            
