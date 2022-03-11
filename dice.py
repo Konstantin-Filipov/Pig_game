@@ -1,3 +1,5 @@
+"""The dice class where is generated a random number to be thrown for yeah roll method
+which after that passes argument to dice_graph() method """
 import random
 
 class Dice:
@@ -8,41 +10,41 @@ class Dice:
         """Roll a dice once and return the value."""
         roll = random.randint(1, 6)
         return roll
-    
+
     def dice_graph(self, r):
+        """Produce graphical representation of current dice's face"""
         if r == 1:
             print(" _______")
             print("|       |")
             print("|   O   |")
             print("|_______|\n")
-            
+
         elif r == 2:
             print(" _______")
             print("| O     |")
             print("|       |")
             print("|_____O_|\n")
-            
+
         elif r == 3:
             print(" _______")
             print("| O     |")
             print("|   O   |")
             print("|_____O_|\n")
-        
+
         elif r == 4:
             print(" _______")
             print("| O   O |")
             print("|       |")
             print("|_O___O_|\n")
-            
+
         elif r == 5:
             print(" _______")
             print("| O   O |")
             print("|   O   |")
             print("|_O___O_|\n")
-            
+
         elif r == 6:
             print(" _______")
             print("| O   O |")
             print("| O   O |")
             print("|_O___O_|\n")
-            
