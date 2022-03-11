@@ -9,10 +9,8 @@ class ChooseGameMode(cmd.Cmd):
 
     def do_s(self, _):
         """pass 's' argument and run "singleplayer.py" and loop in cmd"""
-        self.gameMode = "singleplayer"
         singleplayer.Singleplayer().cmdloop()
 
     def do_m(self, _):
         """pass 'm' argument and run "multiplayer.py" and loop in cmd"""
-        self.gameMode = "multiplayer"
         multiplayer.Multiplayer().cmdloop()
