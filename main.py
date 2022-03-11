@@ -15,10 +15,8 @@
 ================================================================================
 ================================================================================
 """
-
-import multiplayer
-
+import chooseGameMode
 
 if __name__ == "__main__":
     print(__doc__)
-    multiplayer.Multiplayer().cmdloop()
+    chooseGameMode.ChooseGameMode().cmdloop()
