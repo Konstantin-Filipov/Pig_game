@@ -18,7 +18,8 @@ class Multiplayer(cmd.Cmd):
 
         self.dice = dice.Dice() # dice object to call the roll() later
 
-    def do_setname(self, playerName):
+    def do_change_name(self, playerName):
+        """Sets a new player nickname"""
         if self.playerTurn.index == 1:
             self.player1.setName(playerName)
             print(f"nickname for player{self.playerTurn.index} is set to {playerName}")
@@ -40,17 +41,18 @@ class Multiplayer(cmd.Cmd):
     def do_roll(self, _):
         """roll the dice"""
         rolled = self.dice.roll()
+        self.dice.dice_graph(rolled) # pass rolled as argument to generate graphical dice face
         if rolled != 1:
             if self.playerTurn.index == 1:
                 self.player1.score_turn += rolled
                 self.player1.update_score(rolled) # update ocerall score
                 print(f"Player {self.player1.name} rolled {rolled}, overall score: {self.player1.score}")
+                #self.player1.check_score(self.player1.score, self.player1.name) # check if the score exceed 100
             elif self.playerTurn.index == 2:
-                self.player1.check_score(self.player1.score, self.player1.name) # check if the score exceed 100
                 self.player2.score_turn += rolled
                 self.player2.update_score(rolled) # update ocerall score
                 print(f"Player {self.player2.name} rolled {rolled}, overall score: {self.player2.score}")
-                self.player2.check_score(self.player2.score, self.player2.name) # check if the score exceed 100
+                #self.player2.check_score(self.player2.score, self.player2.name) # check if the score exceed 100
         else:
             if self.playerTurn.index == 1:
                 self.player1.score -= self.player1.score_turn
