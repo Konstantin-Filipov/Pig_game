@@ -14,37 +14,25 @@ class Dice:
     def dice_graph(self, r):
         """Produce graphical representation of current dice's face"""
         if r == 1:
-            print(" _______")
-            print("|       |")
-            print("|   O   |")
-            print("|_______|\n")
+            dice_face = " _______\n|       |\n|   O   |\n|_______|\n"
+            return dice_face
 
         elif r == 2:
-            print(" _______")
-            print("| O     |")
-            print("|       |")
-            print("|_____O_|\n")
+            dice_face = " _______\n| O     |\n|       |\n|_____O_|\n"
+            return dice_face
 
         elif r == 3:
-            print(" _______")
-            print("| O     |")
-            print("|   O   |")
-            print("|_____O_|\n")
+            dice_face = " _______\n| O     |\n|   O   |\n|_____O_|\n"
+            return dice_face
 
         elif r == 4:
-            print(" _______")
-            print("| O   O |")
-            print("|       |")
-            print("|_O___O_|\n")
+            dice_face = " _______\n| O   O |\n|       |\n|_O___O_|\n"
+            return dice_face
 
         elif r == 5:
-            print(" _______")
-            print("| O   O |")
-            print("|   O   |")
-            print("|_O___O_|\n")
+            dice_face = " _______\n| O   O |\n|   O   |\n|_O___O_|\n"
+            return dice_face
 
         elif r == 6:
-            print(" _______")
-            print("| O   O |")
-            print("| O   O |")
-            print("|_O___O_|\n")
+            dice_face = " _______\n| O   O |\n| O   O |\n|_O___O_|\n"
+            return dice_face
