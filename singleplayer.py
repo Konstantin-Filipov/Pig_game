@@ -19,47 +19,43 @@ class Singleplayer(cmd.Cmd):
         self.dice = dice.Dice() # dice object to call the roll() later
         self.bot = bot.Bot() # create bot obj
         self.bot.set_bot_level() # call set_level() to set level atribute
-        print("Please set player's name\n")
-        name = input()
-        self.do_change_name(name)
 
-    def do_change_name(self, playerName):
-        """Change real player's name"""
-        self.player1.setName(playerName)
-        print(f"player nickname is set to {playerName}")
+    def do_set_name(self, _):
+        """Type "set_name" to set a new nickname"""
+        self.player1.setName()
 
     def do_hold(self, _):
-        """Switches the turn """
+        """Type in "hold" to end your current turn"""
         self.player1.score_turn = 0 # reset the score turn for player 1
         print(f"Now is BOT's turn")
         self.bot.bot_turn()#bot rolls the dice multiple times here
         print (f"Now is {self.player1.name}'s turn")
 
     def do_cheat(self, _):
-        """roll dice until exceeds 100"""
-        while self.player1.score < 100:
-            rolled = self.dice.roll()
-            if rolled == 1:
-                rolled += 1
-            self.dice.dice_graph(rolled)
-            self.player1.update_score(rolled)
-            print(f"Player {self.player1.name} rolled {rolled}, overall score: {self.player1.score}")
-
-        print("Congrats!!! You won by cheating :0!")
-        self.player1.isCheater = True
+        """Type in "cheat" to win the game instantly"""
+        self.player1.cheat()
+        self.do_exit(self)
 
     def do_roll(self, _):
-        """roll the dice"""
+        """Type "roll" to throw the dice"""
         rolled = self.dice.roll()
         self.dice.dice_graph(rolled)
 
         if rolled != 1:
-            self.player1.score_turn = rolled
-            self.player1.update_score(rolled) # update overall score
-            print(f"Player {self.player1.name} rolled {rolled}, overall score: {self.player1.score}")
+            self.updateScore_checkWinner(rolled)
         else:
-            print(f"{self.player1.name} rolled 1 and lost the points from this turn")
-            self.do_hold(self)
+            self.removePoints_switchTurn()
+
+    def updateScore_checkWinner(self, arg):
+        """update player's score and check if there is winner"""
+        self.player1.update_score(arg) # update ocerall score
+        if self.player1.isWinner():
+            self.do_exit(self)
+
+    def removePoints_switchTurn(self):
+        """reset points from current turn & switch turn"""
+        self.player1.remove_points()
+        self.do_hold(self)
 
     def do_start(self, _):
         """start a new game"""
@@ -74,7 +70,10 @@ class Singleplayer(cmd.Cmd):
     def do_exit(self, _):
         # pylint: disable=no-self-use
         """Leave the game."""
-        print("You left the current game, type 'start' to start a new one.\n")
+        print("press any key to leave game, press 's' to start a new one")
+        comand = input()
+        if comand == 's':
+            self.do_start(self)
         return True
 
     def do_EOF(self, arg):
