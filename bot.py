@@ -30,7 +30,7 @@ class Bot:
             self.iterations = random.randint(5, 8)
 
     def bot_turn(self):
-        """Automatic turn which rolls multiple times depending on 'level' value"""
+        """Automaticaly called turn which rolls multiple times depending on 'level' value"""
         self.set_iterations()
         self.die = dice.Dice()
         for i in range (self.iterations):
