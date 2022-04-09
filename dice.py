@@ -15,19 +15,13 @@ class Dice:
         """Produce graphical representation of current dice's face"""
         if r == 1:
             print(" _______\n|       |\n|   O   |\n|_______|\n")
-
         elif r == 2:
             print(" _______\n| O     |\n|       |\n|_____O_|\n")
-
         elif r == 3:
             print(" _______\n| O     |\n|   O   |\n|_____O_|\n")
-
         elif r == 4:
             print(" _______\n| O   O |\n|       |\n|_O___O_|\n")
-
         elif r == 5:
             print(" _______\n| O   O |\n|   O   |\n|_O___O_|\n")
-
         elif r == 6:
             print(" _______\n| O   O |\n| O   O |\n|_O___O_|\n")
-            
