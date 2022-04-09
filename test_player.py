@@ -1,46 +1,46 @@
 import unittest
-import Player
+from unittest import mock
+from unittest.mock import patch
+import player
 
 class TestPlayerClass(unittest.TestCase):
-    player_list = []
 
-    def testing_default_objects(self):
-        """Instantiating a player object"""
-        player_id = player.Player()
+    @patch('builtins.input', return_value = "Koko")
+    def test_setName(self, mock_input):
+        """"Tests set name"""
+        player_obj = player.Player(1)
+        player_obj.setName()
+        exp = player_obj.name == "Koko"
+        self.assertTrue(exp)
 
-        self.assertIsInstance(player_id,player.Player())
-        
-        namn = 'Jane'
-        point = 0
-        self.assertEquals(namn,point)
+    def test_update_score(self):
+        """Test update_score() method."""
+        player_obj = player.Player(1)
+        add = 6
+        res = player_obj.score + add
+        player_obj.update_score(add)
+        exp = player_obj.score
+        self.assertEqual(res, exp)
 
+    def test_isWinner(self):
+        """test is winner method."""
+        player_obj = player.Player(1)
+        player_obj.score = 100
+        res = player_obj.isWinner()
+        exp = True
+        self.assertEqual(res, exp)
 
-    def add_objects_to_list(player_list):
-        """adding a player objects to a list"""
-        player_id = player.Player('Jane',0)
-        player_one = player.Player('John',0)
-        
-        player_id.add()
-        player_one.add()
+    def test_remove_points(self):
+        """test remove points from turn"""
+        player_obj = player.Player(1)
+        player_obj.score = 10
+        player_obj.score_turn = 4
+        res = player_obj.score - player_obj.score_turn
+        exp = player_obj.remove_points()
+        self.assertEqual(res, exp)
 
-    def test_updating_score(self):
-        """Updating the score of each player"""
-        player_id = player.Player('Jane',3)
-        player_one = player.Player('John',1)
-        
-        player_id.update_score()
-        player_one.update_score()
-
-    def test_sort_score_list(player_list):
-        """getting the scores of players and sorting the list by it scores"""
-        player_list.sort()
-        
-
-
-
-
-
-
-
-
-
+    def test_cheat(self):
+        """test cheat method"""
+        player_obj = player.Player(1)
+        player_obj.cheat()
+        self.assertEqual(player_obj.isCheater, True)
