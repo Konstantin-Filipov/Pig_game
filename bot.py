@@ -42,6 +42,11 @@ class Bot:
         print("BOT Held the dice.")
         self.print_score()
 
+    def reached100(self):
+        if self.score >= 100:
+            print("BOT reached 100 points and won the game!")
+            return True
+
     def print_score(self):
         """print score in the end of BOT's turn"""
         print(f"BOT's score is {self.score}")
