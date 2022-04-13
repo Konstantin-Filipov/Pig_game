@@ -4,7 +4,7 @@ from multiplayer import player
 from multiplayer import dice
 import unittest
 from unittest import mock
-from unittest.mock import patch
+from unittest.mock import patch, mock_open
 import cmd
 
 class Test_multiplayer(unittest.TestCase):
@@ -97,6 +97,18 @@ class Test_multiplayer(unittest.TestCase):
         mult_obj.turn_index = 2
         mult_obj.removePoints_switchTurn()
         self.assertTrue(mock_remove.called)
+
+    def test_dumpHighScore(self):
+        """test writing player scores to file"""
+        with patch("builtins.open", mock_open(read_data="data")) as mock_file:
+            assert open("multipl_highscores.txt").read() == "data"
+        mock_file.assert_called_with("multipl_highscores.txt")
+
+    def test_do_show_scores(self):
+        """test show scores method"""
+        with patch("builtins.open", mock_open(read_data="data")) as mock_file:
+            assert open("multipl_highscores.txt").read() == "data"
+        mock_file.assert_called_with("multipl_highscores.txt")
 
     @mock.patch("builtins.print")
     def test_do_start(self, mock):

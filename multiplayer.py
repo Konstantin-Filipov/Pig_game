@@ -77,6 +77,23 @@ class Multiplayer(cmd.Cmd):
             self.player2.remove_points()
             self.do_hold(self)
 
+    def do_show_scores(self, _):
+        """type 'show_score' to show highscore table"""
+        with open ('multipl_highscores.txt', 'r') as f:
+            data = f.read()
+            print(data)
+
+    def dumpHighScore(self):
+        """store player's scores and data to file"""
+        str1 = (f"name: {self.player1.name}, score: {self.player1.score}")
+        str2 = (f"name: {self.player2.name}, score: {self.player2.score}")
+        str3 = ("-----------------------")
+
+        with open('multipl_highscores.txt', 'a+') as f:
+            f.write(str1 + "\n")
+            f.write(str2 + "\n")
+            f.write(str3 + "\n")
+
     def do_start(self, _):
         """start a new game"""
         print("You have started a new game.\n")
@@ -89,7 +106,8 @@ class Multiplayer(cmd.Cmd):
 
     def do_exit(self, _):
         # pylint: disable=no-self-use
-        """Leave the game."""
+        """Leave the game and players scores into file"""
+        self.dumpHighScore()
         print("press any key to leave game, press 's' to start a new one")
         comand = input()
         if comand == 's':
