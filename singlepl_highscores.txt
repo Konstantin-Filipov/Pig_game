@@ -1,0 +1,32 @@
+mode: normal
+name: play1, score: 100
+name: BOT, score: 0
+-----------------------
+mode: hard
+name: babmoo2, score: 15
+name: BOT, score: 108
+-----------------------
+mode: normal
+name: None, score: 0
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: <MagicMock name='roll().__radd__()' id='2120148778624'>
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: 0
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: <MagicMock name='roll().__radd__()' id='2031229406752'>
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: 0
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: <MagicMock name='roll().__radd__()' id='1746980441728'>
+name: BOT, score: 0
+-----------------------
