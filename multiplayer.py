@@ -49,7 +49,7 @@ class Multiplayer(cmd.Cmd):
             self.player1.cheat()
         elif self.turn_index == 2:
             self.player2.cheat()
-        self.do_exit(self)
+        return self.do_exit(self)
 
     def do_roll(self, _):
         """Type "roll" to throw the dice"""

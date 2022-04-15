@@ -30,3 +30,59 @@ mode: normal
 name: None, score: <MagicMock name='roll().__radd__()' id='1746980441728'>
 name: BOT, score: 0
 -----------------------
+mode: normal
+name: None, score: 0
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: <MagicMock name='roll().__radd__()' id='2342746776576'>
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: 0
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: <MagicMock name='roll().__radd__()' id='2655463527328'>
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: 0
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: <MagicMock name='roll().__radd__()' id='1596184384416'>
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: 0
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: <MagicMock name='roll().__radd__()' id='2840847881648'>
+name: BOT, score: 0
+-----------------------
+mode: hard
+name: koko, score: 101
+name: BOT, score: 0
+-----------------------
+mode: hard
+name: koko, score: 103
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: 100
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: 100
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: 0
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: None, score: <MagicMock name='roll().__radd__()' id='1943068070864'>
+name: BOT, score: 0
+-----------------------

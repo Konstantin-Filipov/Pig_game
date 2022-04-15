@@ -141,7 +141,7 @@ Type help or ? to list commands.</p>
     <span class="k">def</span> <span class="nf">do_cheat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Type in &quot;cheat&quot; to win the game instantly&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">player1</span><span class="o">.</span><span class="n">cheat</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">do_exit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_exit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">do_roll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Type &quot;roll&quot; to throw the dice&quot;&quot;&quot;</span>
@@ -255,7 +255,7 @@ Type help or ? to list commands.</p>
     <span class="k">def</span> <span class="nf">do_cheat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Type in &quot;cheat&quot; to win the game instantly&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">player1</span><span class="o">.</span><span class="n">cheat</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">do_exit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_exit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">do_roll</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Type &quot;roll&quot; to throw the dice&quot;&quot;&quot;</span>
@@ -436,7 +436,7 @@ in order to inherit Cmd's methods and encapsulate action methods.</p>
             <div class="pdoc-code codehilite"><pre><span></span>    <span class="k">def</span> <span class="nf">do_cheat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Type in &quot;cheat&quot; to win the game instantly&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">player1</span><span class="o">.</span><span class="n">cheat</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">do_exit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_exit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 </pre></div>
 
         </details>

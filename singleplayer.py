@@ -42,7 +42,7 @@ class Singleplayer(cmd.Cmd):
     def do_cheat(self, _):
         """Type in "cheat" to win the game instantly"""
         self.player1.cheat()
-        self.do_exit(self)
+        return self.do_exit(self)
 
     def do_roll(self, _):
         """Type "roll" to throw the dice"""

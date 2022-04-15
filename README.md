@@ -69,3 +69,11 @@ If level difficulty is set to "hard". It means that bot will throw from 5 to 8 (
   "pdoc <name_of_module>"
 - to save documentation as html under ./doc directory, type in cmd:
   "pdoc <name_of_module> -o ./docs"
+  -----------------------------------------------------------------------------------------------------------------------------
+  -----------------------------------------------------------------------------------------------------------------------------
+  7. Generating UML diagrams from
+  - install pylint, in cmd, type:
+  pip install pylint
+  - Use pyreverse command to create the UML diagram image, in cmd, type:
+  pyreverse <name of the file>
+  - and then type: dot -Tpng classes.dot -o <output_path_name>

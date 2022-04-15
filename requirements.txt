@@ -1,5 +1,8 @@
-required installations:
-
--install terminal
--install python. if you have it already, update it.
--install the game folder itself
+bandit
+cohesion
+flake8
+pylint
+black
+pdoc3
+sphinx
+coverage
