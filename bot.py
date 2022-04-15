@@ -1,3 +1,8 @@
+"""
+Here is defined Bot class:
+Bot Difficulties feature is included
+Automated turn feature is included
+"""
 import random
 import dice
 
@@ -43,6 +48,7 @@ class Bot:
         self.print_score()
 
     def reached100(self):
+        """method which checks whether bot's score has reached 100 points"""
         if self.score >= 100:
             print("BOT reached 100 points and won the game!")
             return True

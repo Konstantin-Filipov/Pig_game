@@ -1,3 +1,6 @@
+"""
+Module dedicated for testing player module.
+"""
 import unittest
 from unittest import mock
 from unittest.mock import patch

@@ -1,4 +1,6 @@
-"""Player class"""
+"""
+This is where player class is defined.
+"""
 import dice
 
 class Player:
@@ -28,6 +30,7 @@ class Player:
         print(f"Player {self.name} rolled {toAdd}, overall score: {self.score}")
 
     def isWinner(self):
+        """check wether the player has reached 100 points"""
         if self.score >= 100:
             print(f"\n{self.name} is the first one who reached 100 points!!")
             print(f"{self.name} WON!\n")
@@ -35,6 +38,7 @@ class Player:
             return True
 
     def remove_points(self):
+        """remove made points from current turn"""
         self.score -= self.score_turn
         print(f"{self.name} rolled 1 and lost points from this turn, overall score is {self.score}")
         return self.score

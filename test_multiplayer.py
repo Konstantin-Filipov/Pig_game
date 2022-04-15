@@ -1,4 +1,6 @@
-"""Multiplayer class unittest."""
+"""
+Module dedicated for testing multiplayer module.
+"""
 import multiplayer
 from multiplayer import player
 from multiplayer import dice

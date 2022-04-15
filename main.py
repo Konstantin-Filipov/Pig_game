@@ -1,19 +1,15 @@
 """
 ================================================================================
 ================================================================================
-                            WELCOME TO PIG
-
-                Type "setname" to set your username!
-
+                            WELCOME TO PIG GAME
+              Choose singleplayer or multiplayer mode
         Type "roll" in order to throw the dice to collect points
                         But be careful!!!
-    If you roll 1 than your collected points from this round will be lost
+    If you roll 1 then your collected points from this round will be lost
           So if you feel like you shouldn't push your luck anymore
        Type "hold" to hold your points and pass the turn to your enemy.
-
-                  Whoever reaches 100 is the WINNER!
-================================================================================
-================================================================================
+                    Type "help"/"?" to list all commands.
+                  Whoever reaches 100 first is the WINNER!
 """
 import chooseGameMode
 

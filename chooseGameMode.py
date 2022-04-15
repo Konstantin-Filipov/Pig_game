@@ -1,4 +1,9 @@
-"""Set the game mode of the game, this file is called in main.py"""
+"""
+Set the game mode of the game
+Press 's' for singleplayer mode
+Press 'm' for multiplayer mode
+"""
+
 import singleplayer
 import multiplayer
 import cmd

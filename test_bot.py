@@ -1,3 +1,6 @@
+"""
+Module dedicated for testing bot module.
+"""
 import bot
 import unittest
 from unittest import mock

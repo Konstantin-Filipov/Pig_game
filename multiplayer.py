@@ -1,4 +1,8 @@
-"""Using the cmd module to create a shell for the main program"""
+"""
+Welcome to multiplayer mode game!
+This is the module executed when the player chooses multiplayer mode
+Type help or ? to list commands.
+"""
 
 import cmd
 import dice

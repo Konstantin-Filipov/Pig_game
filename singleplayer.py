@@ -1,6 +1,8 @@
-"""Using the cmd module to create a shell for the main program"""
-"""Welcome to the game. Type help or ? to list commands.\nGame mode set to singleplayer.\n"""
-
+"""
+Welcome to Singleplayer mode game!
+This is the module executed when the player chooses singleplayer mode
+Type help or ? to list commands.
+"""
 import cmd
 import dice
 import player

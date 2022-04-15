@@ -1,9 +1,12 @@
-"""The dice class where is generated a random number to be thrown for yeah roll method
-which after that passes argument to dice_graph() method """
+"""
+The dice class where is generated a random number to be thrown for yeah roll method
+which after that passes argument to dice_graph() method
+"""
 import random
 
 class Dice:
     def __init__(self):
+        """Object initialization"""
         random.seed()
 
     def roll(self):

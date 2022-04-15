@@ -1,6 +1,5 @@
+required installations:
 
-## Requirements:
-
-##
-##
-##
+-install terminal
+-install python. if you have it already, update it.
+-install the game folder itself

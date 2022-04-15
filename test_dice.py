@@ -1,3 +1,6 @@
+"""
+Module dedicated for testing dice module.
+"""
 import unittest
 import dice
 from unittest import mock

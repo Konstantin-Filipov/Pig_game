@@ -1,3 +1,6 @@
+"""
+Module dedicated for testing chooseGameMode module.
+"""
 import unittest
 from unittest import mock
 from unittest.mock import patch
