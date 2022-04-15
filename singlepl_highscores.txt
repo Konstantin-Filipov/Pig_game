@@ -86,3 +86,15 @@ mode: normal
 name: None, score: <MagicMock name='roll().__radd__()' id='1943068070864'>
 name: BOT, score: 0
 -----------------------
+mode: normal
+name: koko, score: 101
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: kok, score: 104
+name: BOT, score: 0
+-----------------------
+mode: normal
+name: koko, score: 103
+name: BOT, score: 0
+-----------------------

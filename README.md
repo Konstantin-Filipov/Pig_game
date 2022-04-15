@@ -60,6 +60,7 @@ If level difficulty is set to "hard". It means that bot will throw from 5 to 8 (
 - to generate html file with the report, type:
   "coverage html"
 - now navigate to <project_folder>/htmlcov/index.html and open the html file in some browser
+
 -----------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------
 6. Generate documentation from code

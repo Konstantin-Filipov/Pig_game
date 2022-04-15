@@ -101,7 +101,7 @@ class Singleplayer(cmd.Cmd):
         print("press any key to leave game, press 's' to start a new one")
         comand = input()
         if comand == 's':
-            self.do_start(self)
+            return self.do_start(self)
         return True
 
     def do_EOF(self, arg):
